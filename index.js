@@ -23,12 +23,13 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`${bot.users.size} users! |${bot.guilds.size} guilds! | MOTD: oof |`, {type: "WATCHING"});
+  bot.user.setActivity(`[${bot.guilds.size} guilds, ${bot.users.size} users]`, {type: "WATCHING"});
 
 });
 
 bot.on("message", async message => {
   if(message.author.bot) return;
+  // if(message.author.id = "45737546705443269") return;
   if(message.channel.type === "dm") return;
 
 

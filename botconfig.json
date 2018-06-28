@@ -1,7 +1,8 @@
 {
-  "token": "no.u^420",
-  "invite": "https://discordapp.com/oauth2/authorize?client_id=4${your-bot-id-here}&scope=bot&permissions=8",
+  "toke": "no u",
+  "token": "NDQwMTcyNDE0NzI3NjE4NTYw.DgYPGg.twG32FdaouoYqG1-3qjjtuEnZvI",
+  "invite": "https://discordapp.com/oauth2/authorize?client_id=440172414727618560&scope=bot&permissions=8",
   "prefix": "gt-",
-  "id": "bot.owner.id",
-  "apikey": "get-from-fortnite-tracker.com"
+  "id": "231956829159161856",
+  "apikey": "61cd87cc-6542-48e5-987c-88c2377b15a2"
 }

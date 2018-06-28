@@ -1,18 +1,24 @@
 const Discord = require("discord.js")
+const moment = require("moment")
 
 module.exports.run = async (bot, message, args) => {
-  let sicon = message.guild.iconURL;
-      let serverembed = new Discord.RichEmbed()
-      .setDescription("Server Info")
-      .setColor("#15f153")
-      .setThumbnail(sicon)
-      .addField("Server Name", message.guild.name)
-      .addField("Server ID", message.guild.id)
-      .addField("Created On", message.guild.createdAt)
-      .addField("You Joined", message.member.joinedAt)
-      .addField("Total Members", message.guild.memberCount)
+let a;
+let b;
+let c;
+let d;
 
-      return message.channel.send(serverembed)
+
+
+let embed = new Discord.RichEmbed()
+.setTitle(message.guild)
+.setDescription("Server Info")
+.setThumbnail(message.guild.iconURL)
+.addField("User Count:", `**{${message.guild.memberCount}}**`)
+.addField("Created On:", `**{${moment(message.guild.createdAt).format('M/D/YYYY h:mm a')}}**`)
+.setFooter(`MC: [${message.guild.memberCount}] // User: [${message.author.username}] // Date: [${moment(message.createdAt).format('M/D/YYYY h:mm a')}]`, message.author.iconURL)
+
+message.channel.send(embed)
+  
 }
 
 module.exports.help = {
