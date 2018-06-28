@@ -2,9 +2,9 @@ const Discord = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
   let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-   if(!bUser) return message.channel.send({embed: {color: 12345, description: `Could not find user pinged.`}});
+   if(!bUser) return message.channel.send({embed: {color: 12345, description: `Could not find user.`}});
    let bReason = args.join(" ").slice(22);
-   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send({embed: {color: 12345, description: `Sorry, I dont have the permission: MANAGE_MESSAGES`}});
+   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send({embed: {color: 12345, description: `Sorry, the user you are trying to ban has MANAGE_MESSAGES.`}});
    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send({embed: {color: 12345, description: `No kicku...`}});
 
    let kickEmbed = new Discord.RichEmbed()

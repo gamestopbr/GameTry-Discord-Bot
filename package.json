@@ -1,13 +1,20 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "forever": "^0.15.3",
+    "fortnite": "^4.1.1",
+    "isgd": "^1.1.3",
+    "nodemon": "^1.17.5",
+    "pm2": "^2.10.4",
+    "weather-js": "^2.0.0"
+  },
+  "name": "gametry",
+  "description": "\"# GameTry\"",
+  "version": "2.0.1-1",
   "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "test": "gt-help"
   },
-  "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
-  }
+  "author": "Wumpus#0914",
+  "license": "ISC"
 }

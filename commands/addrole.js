@@ -1,6 +1,11 @@
 const discord = require("discord.js")
+const client = discord.client
+const red = "12353"
+const green = "123121"
+
 
 module.exports.run = async (bot, message, args) => {
+  const user = message.mentions.members.first();
   var role = message.content.split(/\s+/g).slice(2).join(" ")
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send({embed: { color: red, description: `Sorry, You do not have the Administrator Permission!`}}).catch(console.error);
    if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.channel.send({embed: { color: red, description: `Sorry, You do not have the Manage Roles Permission!`}}).catch(console.error);
