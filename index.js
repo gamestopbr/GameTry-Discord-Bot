@@ -62,4 +62,3 @@ if(coinAmt === baseAmt){
 
 });
 
-bot.login(botconfig.token);
